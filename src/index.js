@@ -44,9 +44,10 @@ function themeDontChange() {
     const savedTheme = localStorage.getItem('theme');
 
     if (savedTheme) {
-        refs.body.classList.add(savedTheme);
+        refs.body.classList.add(savedTheme);   
     };
 
-    // refs.themeSwitch.checked = true;
-    
+    refs.themeSwitch.checked = refs.body.classList.contains(Theme.DARK);
+
+   
 }
